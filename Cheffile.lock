@@ -1,0 +1,87 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apache2 (1.1.12)
+
+GIT
+  remote: https://github.com/coderanger/chef-collectd_plugins
+  ref: master
+  sha: d8e264da9ad982dc75978e48c14a9323db553378
+  specs:
+    collectd_plugins (1.0.0)
+      collectd (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/chef-collectd
+  ref: master
+  sha: c3365623f7cb2beaddc9de296a62c42680260298
+  specs:
+    collectd (1.0.0)
+      apache2 (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/resolver
+  ref: master
+  sha: 0409b6b10ae62a60232398ea086548c53d6e033a
+  specs:
+    resolver (0.8.2)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/rightscale
+  ref: master
+  sha: 0409b6b10ae62a60232398ea086548c53d6e033a
+  specs:
+    rightscale (0.0.1)
+      collectd (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/system
+  ref: master
+  sha: 0409b6b10ae62a60232398ea086548c53d6e033a
+  specs:
+    system (0.0.1)
+      cron (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/squid-cookbook.git
+  ref: master
+  sha: 25e55eb0e9deaa2c21e762fa247589c3a461d8b7
+  specs:
+    squid (0.2.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/cron
+  ref: master
+  sha: f2db6dbcb1a134dddf3488c4d2d4c8514ce52c3e
+  specs:
+    cron (1.0.1)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/ntp
+  ref: master
+  sha: 3991185e38b07a09f8a6a4994dc6d778670a11a2
+  specs:
+    ntp (1.1.9)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/sudo
+  ref: master
+  sha: b60e6dd6668d02e6e035c007118d8bbbddb8112f
+  specs:
+    sudo (1.1.1)
+
+DEPENDENCIES
+  collectd (>= 0)
+  collectd_plugins (>= 0)
+  cron (>= 0)
+  ntp (>= 0)
+  resolver (>= 0)
+  rightscale (>= 0)
+  squid (>= 0)
+  sudo (>= 0)
+  sudo (>= 0)
+  system (>= 0)
+
