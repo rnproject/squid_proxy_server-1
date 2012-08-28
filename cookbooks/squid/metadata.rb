@@ -8,3 +8,11 @@ version          "0.2.0"
 %w{ debian ubuntu centos fedora redhat scientific suse}.each do |os|
   supports os
 end
+
+recipe "squid", "Installs and configures Squid caching proxy server."
+
+attribute "squid/port",
+  :display_name => "Squid Listen Port",
+  :description => "The TCP port Squid runs and listens on (default: 3128).",
+  :required => "optional",
+  :default => "3128"
