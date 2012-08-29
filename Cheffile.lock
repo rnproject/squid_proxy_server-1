@@ -48,7 +48,7 @@ GIT
 GIT
   remote: https://github.com/flaccid/squid-cookbook.git
   ref: master
-  sha: a5db0eac83dcd3bb47309fd9cd5f4f83a32d20c9
+  sha: f4b5cb7704aa0d06d967f3ad723ccedbcbe71f74
   specs:
     squid (0.2.0)
 
