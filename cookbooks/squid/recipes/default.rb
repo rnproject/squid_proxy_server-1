@@ -18,45 +18,6 @@
 
 package "squid"
 
-# would be nice to be able to set these in attributes/default.rb but value_for_platform is for recipes :(
-node['squid']['config_dir'] = value_for_platform(
-  ["centos", "redhat", "suse", "fedora" ] => {
-    "default" => "/etc/squid"
-  },
-  ["debian"] => {
-    "default" => "/etc/squid"
-  },
-  ["ubuntu"] => {
-    "12.04" => "/etc/squid3",
-    "default" => "/etc/squid"
-  }
-)
-node['squid']['service_name'] = value_for_platform(
-  ["centos", "redhat", "suse", "fedora" ] => {
-    "default" => "squid"
-  },
-  ["debian"] => {
-    "default" => "squid"
-  },
-  ["ubuntu"] => {
-    "12.04" => "squid3",
-    "default" => "squid"
-  }
-)
-node['squid']['version'] = value_for_platform(
-  ["centos", "redhat", "suse", "fedora" ] => {
-    "default" => ""
-  },
-  ["debian"] => {
-    "default" => ""
-  },
-  ["ubuntu"] => {
-    "12.04" => "31",
-    "default" => ""
-  }
-)
-node['squid']['config_file'] = File.join(node['squid']['config_dir'], node['squid']['service_name'], '.conf')
-
 service node['squid']['service_name'] do
   case node['platform']
   when "redhat","centos","scientific","fedora","suse"
