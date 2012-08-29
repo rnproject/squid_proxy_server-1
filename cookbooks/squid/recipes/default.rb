@@ -43,6 +43,18 @@ node['squid']['service_name'] = value_for_platform(
     "default" => "squid"
   }
 )
+node['squid']['version'] = value_for_platform(
+  ["centos", "redhat", "suse", "fedora" ] => {
+    "default" => ""
+  },
+  ["debian"] => {
+    "default" => ""
+  },
+  ["ubuntu"] => {
+    "12.04" => "31",
+    "default" => ""
+  }
+)
 node['squid']['config_file'] = File.join(node['squid']['config_dir'], node['squid']['service_name'], '.conf')
 
 service node['squid']['service_name'] do
