@@ -13,6 +13,6 @@ recipe "squid", "Installs and configures Squid caching proxy server."
 
 attribute "squid/port",
   :display_name => "Squid Listen Port",
-  :description => "The TCP port Squid runs and listens on (default: 3128).",
+  :description => "The TCP port Squid runs and listens on (default: 56789).",
   :required => "optional",
-  :default => "3128"
+  :default => "56789"
